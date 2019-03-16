@@ -47,10 +47,16 @@ This is the hw03 sample. Please follow the steps below.
 [Lecture 02 ─ Emulation with QEMU]: http://www.nc.es.ncku.edu.tw/course/embedded/02/#Emulation-with-QEMU
 [ESEmbedded_HW02_Example]: https://github.com/vwxyzjimmy/ESEmbedded_HW02_Example
 
---------------------
+-------------------
+## hw03
+# 1.實驗題目
+撰寫簡易c語言並觀察其組語、暫存器、記憶體的變化
+# 2.實驗步驟
+1.先將資料夾 gnu-mcu-eclipse-qemu 完整複製到 ESEmbedded_HW03 資料夾中
+2.寫個c語言的簡單程式
+3.make之後觀察其組語和使用make qemu觀察暫存器與記憶體的狀態
 
-- [x] **If you volunteer to give the presentation next week, check this.**
 
---------------------
 
-**★★★ Please take your note here ★★★**
+
+
