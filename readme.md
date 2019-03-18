@@ -80,5 +80,41 @@ int plus(int j,int k)
 }
 ```
 
+轉換成組語
+![](https://github.com/JIMWU0808/ESEmbedded_HW03/blob/master/img/3-1.png)
+
+![](https://github.com/JIMWU0808/ESEmbedded_HW03/blob/master/img/3-2.png)
+8 :把當前狀態儲存到 0x200000fc & 0x200000f8
+
+a :空出四個儲存位置
+
+c :暫存器r3＝1
+
+e :把r3的值存到r7+4的位置                           到18同理
+
+1c、1e、20：j＋＝i
+
+22、24、26：k＊＝i
+
+2e、30：i＋＋
+
+32、34、36、38：for迴圈判斷
+
+3a、3c、3e ：呼叫函式
+
+42 ：while無限迴圈
+
+44 ～54 ：函式本身功能
+
+56、58 ：返回原本記憶體位置
+
+5a  ：根據 &ARM的指令集指示 ldr這個指令通常都是作加载指令的，但是它也可以作偽指令。一般來說有*＝*為偽指令。  可以使用 .W 寬度說明符強制 LDR 在 Thumb-2 代碼中生成 32 位指令。LDR.W 始终生成 32 位元指令。在這裡式用來加载寄存器。 地址为 pc 加偏移量。
+
+5e  ： 跳回原本函式
+
+![](https://github.com/JIMWU0808/ESEmbedded_HW03/blob/master/img/3-3.png)
+最後算出來的答案，分別存在r1、r2、r3中
 
 
+# 3.结果與討論
+這次做完之後大概了解一點c語言和組語和一些組語特殊的指令
